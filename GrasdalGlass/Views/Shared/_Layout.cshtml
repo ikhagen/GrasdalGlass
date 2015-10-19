@@ -26,8 +26,16 @@
 
 
                     <li class="dropdown">
-                    <li>@Html.ActionLink("Vindu", "Vindu", "Products", new { @class = "my-class" }, new { data_toggle = "dropdown" })</li>
-                  
+                        @*@Html.ActionLink("Vindu", "Vindu", "Products", new { @class = "dropdown-toggle caret" }, new { data_toggle = "dropdown" })*@
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vindu<b class="caret"></b></a>
+                        <ul class="dropdown-menu" id="left-align">
+                            <li>@Html.ActionLink("Oversikt over vidustyper", "Vindu", "Products")</li>
+                            <li>@Html.ActionLink("Energispareglass", "Energispareglass", "Vindu")</li>
+                            <li>@Html.ActionLink("Selvrensende glass", "Selvrensende_glass", "Vindu")</li>
+                            <li>@Html.ActionLink("Sikkerhetsglass og sikringsglass", "Sikkerhetsglass_sikringsglass", "Vindu")</li>
+                            <li>@Html.ActionLink("Solbeskyttende glass", "Solbeskyttende_glass", "Vindu")</li>
+                            <li>@Html.ActionLink("Støydempende glass", "Støydempende_glass", "Vindu")</li>
+                        </ul>
                     </li>
 
                     <li>@Html.ActionLink("Annet glass", "Annet", "Products")</li>
@@ -46,7 +54,7 @@
                 <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
             </div>
         </nav>
-       </div>
+    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
